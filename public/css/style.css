@@ -442,7 +442,7 @@ a.readmore_bt {
 .header {
      font-family: poppins;
      padding: 10px 0px;
-     background: url(../images/hea.png);
+     background: url(../images/header.png);
      background-repeat: no-repeat;
 background-size: 100% 100%;
 background-position: center center;
@@ -1780,7 +1780,7 @@ display: block
 }
 
 .clients_red {
-     background: #ff0000;
+     background: #20b5c9;
      padding-top: 90px;
      padding-bottom:110px;
 } 
@@ -1842,7 +1842,7 @@ border-radius: 50px;
 /** brand **/
 .brand {
      padding-top: 60px;
-     border-top: #db0000 solid 6px;}
+     border-top: #00f7ff solid 6px;}
 
 .brand-bg {
      background: #ebebeb;
@@ -1932,7 +1932,7 @@ margin-top: 40px
 } 
 
 .form-control {
-     border: #ff0000 solid 2px;
+     border: #0051ff solid 2px;
      border-radius: inherit;
      margin-bottom: 30px;
      padding: 13px 20px;
@@ -1940,12 +1940,12 @@ margin-top: 40px
 }
 .form-control:focus {
      box-shadow: inherit;
-     border: #ff0000 solid 2px !important;
+     border: #107ce0 solid 2px !important;
 }
 
 .textarea {
      font-family: poppins;
-     border: #ff0000 solid 2px;
+     border: #0051ff solid 2px;
      margin-bottom: 30px;
      padding: 13px 20px;
      width: 100%;
@@ -1974,7 +1974,7 @@ margin-top: 40px
      padding-top: 60px;
 }
 .footer {
-     background-color: #051108;
+     background-color: #20b5c9;
      text-align: center;
      font-family: poppins;
 }
