@@ -209,6 +209,7 @@
                             <% for (let i = 0; i < item.rating; i++) { %>
                                 <i><img src="images/star.png"/></i>
                             <% } %>
+
                             <form action="/add_to_cart" method="post">
                                 <br>
                                 <input type="hidden" name="id" value="<%= item.id  %>">
@@ -217,7 +218,7 @@
                                 <input type="hidden" name="sale_price" value="<%= item.sale_price  %>">
                                 <input type="hidden" name="quantity" value="<%= item.quantity  %>">
                                 <input type="hidden" name="image" value="<%= item.image  %>">
-
+    
                                 <input type="submit" value="Add to cart" class="btn btn-primary">
                             </form>
 
