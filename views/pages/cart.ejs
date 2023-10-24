@@ -124,13 +124,13 @@
                      <% } %>
                      <br>
                      
-                     <form  method="post" action="/edit_product_qauntity" class="edit_product_qauntity">
+                     <!-- <form  method="post" action="/edit_product_qauntity" class="edit_product_qauntity">
 
                         <input type="hidden" name="id" value="<%=item.id%>">
                         <input type="submit" value="-" class="edit-btn" name="decrease_product_quantity_btn" style="color: black; background-color: white;" >
                         <input style="text-align: center;" type="text" class="quantitybox" name="quantity" value="<%= item.quantity %>" readonly >
                         <input type="submit" value="+" class="edit-btn" name="increase_product_quantity_btn" style="color: rgb(255, 255, 255); background-color: red;">
-                    </form>
+                    </form> -->
 
 
                     <form method="post" action="/remove_product">
@@ -142,6 +142,13 @@
                     </div>
                 </td> 
                 <td>
+                    <form  method="post" action="/edit_product_qauntity" class="edit_product_qauntity">
+
+                        <input type="hidden" name="id" value="<%=item.id%>">
+                        <input type="submit" value="-" class="edit-btn" name="decrease_product_quantity_btn" style="color: black; background-color: white;" >
+                        <input style="text-align: center;" type="text" class="quantitybox" name="quantity" value="<%= item.quantity %>" readonly >
+                        <input type="submit" value="+" class="edit-btn" name="increase_product_quantity_btn" style="color: rgb(255, 255, 255); background-color: red;">
+                    </form>
                     
                 </td>
 

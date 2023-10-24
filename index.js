@@ -73,7 +73,6 @@ app.get('/cart', function (req, res) {
 
   var cart = req.session.cart;
   var total = req.session.total;
-
   res.render('pages/cart', { cart: cart, total: total });
 
 });
@@ -97,6 +96,7 @@ app.post('/add_to_cart', function (req, res) {
   var image = req.body.image;
   var product = { id: id, name: name, price: price, sale_price: sale_price, quantity: quantity, image: image };
 
+  console.log(req.body.id);
   if (req, session.cart) {
     var cart = res.session.cart;
     if (!isProductIncart(cart, id)) {
@@ -109,7 +109,6 @@ app.post('/add_to_cart', function (req, res) {
 
   //calculate total
   calculateTotal(cart, req);
-
   //return to cart page
   res.redirect('/cart')
 });
@@ -180,7 +179,8 @@ app.post('/place_order', function(req, res){
 
   var cart = req.session.cart;
   for(let i=0; i<cart.length; i++){
-    products_ids = products_ids + "," + cart[i].id
+    console.log(cart[i].id);
+    products_ids = products_ids + "," + cart[i].id;
   }
 
   con.connect((err)=>{
