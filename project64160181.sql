@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 24, 2023 at 02:19 PM
+-- Generation Time: Oct 26, 2023 at 06:52 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -55,7 +55,8 @@ INSERT INTO `orders` (`id`, `cost`, `name`, `email`, `status`, `city`, `address`
 (8, 299.00, '233', '23', 'pending', '412', '124', '321', '2023-10-24 18:53:52', ','),
 (9, 299.00, '44', '22', 'pending', '22', '44', '33', '2023-10-24 18:58:10', ','),
 (10, 777.77, 'SlinkSmile24180', '23', 'pending', 'บ้านเลน0', '124', '12312312', '2023-10-24 19:07:22', ','),
-(11, 777.77, '1222', '213123', 'pending', '1321213', '1231212', '1312123', '2023-10-24 19:16:52', ',1');
+(11, 777.77, '1222', '213123', 'pending', '1321213', '1231212', '1312123', '2023-10-24 19:16:52', ',1'),
+(12, 175.50, '1', '1', 'pending', '1', '1', '1', '2023-10-26 23:36:01', ',7');
 
 -- --------------------------------------------------------
 
@@ -111,8 +112,13 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`id`, `name`, `description`, `price`, `sale_price`, `quantity`, `image`, `category`, `type`, `rating`) VALUES
-(1, '★ Karambit _ Lore (Field-Tested)', '★ Karambit _ Lore (Field-Tested)', 999.99, 777.77, 1, '★ Karambit _ Lore (Field-Tested).png', '★ Karambit _ Lore (Field-Tested)', '★ Karambit _ Lore (Field-Tested)', 5),
-(2, 'M4A1-S _ Hot Rod (Factory New)', 'M4A1-S _ Hot Rod (Factory New)', 599.00, 299.00, 1, 'M4A1-S _ Hot Rod (Factory New).png', 'M4A1-S _ Hot Rod (Factory New)', 'M4A1-S _ Hot Rod (Factory New)', 4);
+(1, '★ Karambit _ Lore (Field-Tested)', '★ Karambit _ Lore (Field-Tested)', 1280.00, NULL, 1, '★ Karambit _ Lore (Field-Tested).png', '★ Karambit _ Lore (Field-Tested)', '★ Karambit _ Lore (Field-Tested)', 5),
+(2, 'M4A1-S _ Hot Rod (Factory New)', 'M4A1-S _ Hot Rod (Factory New)', 1119.04, NULL, 1, 'M4A1-S _ Hot Rod (Factory New).png', 'M4A1-S _ Hot Rod (Factory New)', 'M4A1-S _ Hot Rod (Factory New)', 4),
+(3, 'AK-47 | Asiimov (Factory New)', 'AK-47 | Asiimov (Factory New)', 254.15, NULL, 1, 'weapon_ak47_cu_ak47_asiimov_light_large.png', 'weapon_ak47_cu_ak47_asiimov_light_large.png', 'weapon_ak47_cu_ak47_asiimov_light_large.png', 5),
+(4, 'AUG | Akihabara Accept (Field-Tested)', 'AUG | Akihabara Accept (Field-Tested)', 920.69, NULL, 1, 'weapon_aug_cu_anime_aug_light_large.png', 'AUG | Akihabara Accept (Field-Tested)', 'AUG | Akihabara Accept (Field-Tested)', 5),
+(5, 'Desert Eagle | Printstream (Factory New)', 'Desert Eagle | Printstream (Factory New)', 128.13, NULL, 1, 'weapon_deagle_cu_deag_printstream_light_large.png', 'Desert Eagle | Printstream (Factory New)', 'Desert Eagle | Printstream (Factory New)', 4),
+(6, 'M4A1-S | Printstream (Factory New)', 'M4A1-S | Printstream (Factory New)', 667.20, NULL, 1, 'weapon_m4a1_silencer_cu_m4a1s_printstream_light_large.png', 'M4A1-S | Printstream (Factory New)', 'M4A1-S | Printstream (Factory New)', 4),
+(7, 'USP-S | Printstream (Factory New)', 'USP-S | Printstream (Factory New)', 175.50, NULL, 1, 'weapon_usp_silencer_cu_usp_printstream_light_large.png', 'USP-S | Printstream (Factory New)', 'USP-S | Printstream (Factory New)', 4);
 
 --
 -- Indexes for dumped tables
@@ -150,7 +156,7 @@ ALTER TABLE `products`
 -- AUTO_INCREMENT for table `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `order_items`
@@ -168,7 +174,7 @@ ALTER TABLE `payments`
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
