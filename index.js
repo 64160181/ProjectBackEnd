@@ -97,16 +97,32 @@ app.post('/add_to_cart', function (req, res) {
   var product = { id: id, name: name, price: price, sale_price: sale_price, quantity: quantity, image: image };
 
   console.log(req.body.id);
-  if (req, session.cart) {
-    var cart = res.session.cart;
-    if (!isProductIncart(cart, id)) {
-      cart.push(product);
-    }
-  } else {
-    req.session.cart = [product];
-    var cart = req.session.cart;
-  }
+  console.log(req.body.quantity);
 
+  // new way
+  var cart = req.session.cart || [];
+
+  var existing_product = cart.find(function (item) {
+    return item.id === id;
+  });
+
+  if (existing_product) { 
+    existing_product.quantity += parseInt(quantity);
+  }else{
+    cart.push(product);
+  }
+  // old way
+  // if (req, session.cart) {
+  //   var cart = res.session.cart;
+  //   if (!isProductIncart(cart, id)) {
+  //     cart.push(product);
+  //   }
+  // } else {
+  //   req.session.cart = [product];
+  //   var cart = req.session.cart;
+  // }
+
+  req.session.cart = cart;
   //calculate total
   calculateTotal(cart, req);
   //return to cart page
@@ -120,7 +136,8 @@ app.post('/remove_product', function (req, res) {
 
   for (let i = 0; i < cart.length; i++) {
     if (cart[i].id === id) {
-      cart.splice(cart.indexOf(i), 1);
+      cart.splice(i, 1);
+      break;
     }
   }
   //recalculate total

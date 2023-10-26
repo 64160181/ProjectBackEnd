@@ -65,8 +65,8 @@
                                     <ul class="menu-area-main">
                                         <li class="active"> <a href="/">Home</a> </li>
                                         <li> <a href="/about">About</a> </li>
-                                        <li><a href="/brand">Brand</a></li>
-                                        <li><a href="/special">Specials</a></li>
+                                        <!-- <li><a href="/brand">Brand</a></li> -->
+                                        <!-- <li><a href="/special">Specials</a></li> -->
                                         <li><a href="/contact">Contact Us</a></li>
                                         <li class="last">
                                             <a href="#"><img src="images/search_icon.png" alt="icon" /></a>
@@ -95,14 +95,14 @@
     <!-- cart -->
     <section class="cart container mt-2 my-3 py-5">
         <div class="container_mt-2">
-            <a>Your Cart</a>
+            <a style="display: block; text-align: center; font-weight: bold;">Your Cart</a>
         </div>
 
-        <table class="pt-5" style="width: 100%">
+        <table class="pt-5" style="width: 100%" border="1px">
             <tr style="color: rgb(255, 255, 255); background-color: black; ">
-                <th >Product</th>
-                <th >Quantity</th>
-                <th style="text-align: right;">Subtotal</th>
+              <th style="text-align: center;">Product</th>
+              <th style="text-align: center;">Quantity</th>
+              <th style="text-align: center;">Subtotal</th>
             </tr>
 
             <% cart.forEach(function(item){ %>
@@ -133,14 +133,14 @@
                     </form> -->
 
 
-                    <form method="post" action="/remove_product">
+                    <!-- <form method="post" action="/remove_product">
                         <br>
                         <button class="btn btn-danger">remove</button>
                         <input type="hidden" name="id" value="<%=item.id%>" >
-                     </form>
+                     </form> -->
                     </div>                    
                     </div>
-                </td> 
+                </td>
                 <td>
                     <form  method="post" action="/edit_product_qauntity" class="edit_product_qauntity">
 
@@ -149,6 +149,12 @@
                         <input style="text-align: center;" type="text" class="quantitybox" name="quantity" value="<%= item.quantity %>" readonly >
                         <input type="submit" value="+" class="edit-btn" name="increase_product_quantity_btn" style="color: rgb(255, 255, 255); background-color: red;">
                     </form>
+
+                    <form method="post" action="/remove_product">
+                        <br>
+                        <button class="btn btn-danger">remove</button>
+                        <input type="hidden" name="id" value="<%=item.id%>" >
+                     </form>
                     
                 </td>
 
@@ -162,8 +168,8 @@
                     <% } %>
                 </td>
             </tr>
-        </table>
         <% }) %>
+    </table>
        
 
         <div class="cart-total">
@@ -175,14 +181,16 @@
             </table>
         </div>
 
-    </section>
+        <a href="/" class="btn btn-primary">Continue Shopping</a>
+
 
     <div class="container">
-        <form method="get" action="/checkout">
+        <form method="get" action="/checkout" style="text-align: center;">
             <button class="btn btn-success">Checkout</button>
         </form>
     </div>
 
+    </section>
     </footer>
     <!-- end contact -->
 
